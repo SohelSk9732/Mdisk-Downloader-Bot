@@ -175,7 +175,7 @@ def formatprint(id,link="",edit=False,call=None, emsg=None):
     m, s = divmod(alldata['duration'], 60)
     h, m = divmod(m, 60)
     format = "Document" if getdata(str(message.from_user.id)) == "D" else "Media/Stream"
-    thumb,thum = ("Exists","Remove Thumbnail") if os.path.exists(f'{message.from_user.id}-thumb.jpg') else ("Not Exists","Set Thumbnail")
+    thumb,thum = ("Exists","🏞Remove Thumbnail") if os.path.exists(f'{message.from_user.id}-thumb.jpg') else ("Not Exists","🏞Set Thumbnail")
     text = f'__Filename:__ `{alldata["filename"]}`\n__Link:__ {link}\n\
 __Size:__ **{alldata["size"]//1048000} MB**\n__Duration:__ **{h}h{m}m{s}s**\n\
 __Resolution:__ **{alldata["width"]}x{alldata["height"]}**\n\
@@ -187,7 +187,7 @@ __Format:__ **{format}**\n__Thumbnail:__ **{thumb}**'
                     InlineKeyboardButton("📽Change Format", callback_data=f'change {message.id}')
                 ],
                 [ 
-                    InlineKeyboardButton(🏞thum, callback_data=f'thumb {message.id}'),
+                    InlineKeyboardButton(thum, callback_data=f'thumb {message.id}'),
                     InlineKeyboardButton("📥Download", callback_data=f'down {message.id}') 
                 ]
             ])
