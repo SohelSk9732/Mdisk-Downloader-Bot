@@ -246,7 +246,7 @@ def echo(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
         app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__', reply_to_message_id=message.id,reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("📦 Source Code", url="https://github.com/bipinkrish/Mdisk-Downloader-Bot")]]))
         return
     
-    app.send_message(message.chat.id, f'__Hi {message.from_user.mention}, I am Mdisk Video Downloader, you can watch Downloaded Videos without MX Player.\n\nSend me a link to Start... or click /help to check usage__',reply_to_message_id=message.id,
+    app.send_message(message.chat.id, f'**👋 Hᴇʏ {message.from_user.mention}**\n\n **Iᴍ Mᴅɪsᴋ Vɪᴅᴇᴏ Dᴏᴡɴʟᴏᴀᴅᴇʀ Bᴏᴛ, Yᴏᴜ Cᴀɴ Wᴀᴛᴄʜ Dᴏᴡɴʟᴏᴀᴅᴇᴅ Vɪᴅᴇᴏs Wɪᴛʜᴏᴜᴛ MX Pʟᴀʏᴇʀ.**\n\n**For More Information Click** /Help',reply_to_message_id=message.id,
     reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("📦 Source Code", url="https://github.com/bipinkrish/Mdisk-Downloader-Bot")]]))
 
 
