@@ -183,12 +183,12 @@ __Format:__ **{format}**\n__Thumbnail:__ **{thumb}**'
     keybord = InlineKeyboardMarkup(
             [   
                 [
-                    InlineKeyboardButton("Rename", callback_data=f'rename {message.id}'),
-                    InlineKeyboardButton("Change Format", callback_data=f'change {message.id}')
+                    InlineKeyboardButton("✏️Rename", callback_data=f'rename {message.id}'),
+                    InlineKeyboardButton("📽Change Format", callback_data=f'change {message.id}')
                 ],
                 [ 
-                    InlineKeyboardButton(thum, callback_data=f'thumb {message.id}'),
-                    InlineKeyboardButton("Download", callback_data=f'down {message.id}') 
+                    InlineKeyboardButton(🏞thum, callback_data=f'thumb {message.id}'),
+                    InlineKeyboardButton("📥Download", callback_data=f'down {message.id}') 
                 ]
             ])
 
