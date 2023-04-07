@@ -586,8 +586,8 @@ def mdisktext(client: pyrogram.client.Client, message: pyrogram.types.messages_a
         return
 
     if not ismemberpresent(message.from_user.id):
-        app.send_message(message.chat.id, '__You are not a member of our Chat\nJoin and Retry__',reply_to_message_id=message.id,
-        reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("Join", url=LINK)]]))
+        app.send_message(message.chat.id, '**Please Join My Update Channel To Use Me**',reply_to_message_id=message.id,
+        reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("✴️ Join My Update Channel ✴️", url=LINK)]]))
         return
 
     if message.text[0] == "/":
