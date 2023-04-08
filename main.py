@@ -529,7 +529,7 @@ def showthumb(client: pyrogram.client.Client, message: pyrogram.types.messages_a
 
 
 # remove thumbline command
-@app.on_message(filters.command(["remove_thumb"]))
+@app.on_message(filters.command(["delete_thumb"]))
 def removethumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
