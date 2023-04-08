@@ -258,7 +258,7 @@ def help(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
         app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
         return
     
-    helpmessage = """**📖 Help**\n\n**Following are the commands and its description:**\n\n/start - check bot alive\n/mdisk mdisklink - usage \n/set_thumb - set default thumbnail\n/delete_thumb - delete default thumbnail\n/show_thumb - show Thumbnail\n/change - change upload mode\n\n**I Am Made By [Archie Bots ](https://t.me/Archie_Bots)**"""
+    helpmessage = """**📖 Help**\n\n**Following are the commands and its description:**\n\n/start - Start The Bot\n/set_thumb - set default thumbnail\n/delete_thumb - delete default thumbnail\n/show_thumb - show Thumbnail\n/change - change upload mode\n\n**I Am Made By [Archie Bots ](https://t.me/Archie_Bots)**"""
     app.send_message(message.chat.id, helpmessage, reply_to_message_id=message.id)
 
 
@@ -479,11 +479,11 @@ def mdiskdown(client: pyrogram.client.Client, message: pyrogram.types.messages_a
     except:
         try: link = message.text.split("mdisk ")[1]
         except:
-            app.send_message(message.chat.id, '__Invalid Format, use like this\n/mdisk https://mdisk.me/xxxxx\nor just send a link without command__',reply_to_message_id=message.id)
+            app.send_message(message.chat.id, 'Invalid Format, use like this\n/mdisk https://mdisk.me/xxxxx\n**Or Just Send A Link Without Command**',reply_to_message_id=message.id)
             return
 
     if "https://mdisk.me/" in link: handlereq(message,link)
-    else: app.send_message(message.chat.id, '__Send only MDisk Link with command followed by the link__',reply_to_message_id=message.id)
+    else: app.send_message(message.chat.id, '**Send only MDisk Link with command followed by the link**',reply_to_message_id=message.id)
 
 
 # thumb command
@@ -505,7 +505,7 @@ def thumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_m
         app.send_message(message.chat.id, '__Thumbnail is Set__',reply_to_message_id=message.id)
 
     except:
-        app.send_message(message.chat.id, '__reply /thumb to a image document of size less than 200KB__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, '**Please send photo which you want to set as a custom thumbnail.**\n\nNo need to use this command every time, just send photo and I will use it as a thumbnail 😅',reply_to_message_id=message.id)
 
 
 # show thumb command
@@ -534,7 +534,7 @@ def removethumb(client: pyrogram.client.Client, message: pyrogram.types.messages
         os.remove(f'{message.from_user.id}-thumb.jpg')
         app.send_message(message.chat.id, '__Thumbnail is Removed__',reply_to_message_id=message.id)
     else:
-        app.send_message(message.chat.id, '__Thumbnail is not Set__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, '**Thumbnail is not Set**',reply_to_message_id=message.id)
 
 
 # thumbline
