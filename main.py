@@ -38,7 +38,7 @@ LINK = os.environ.get("LINK") or CONFIGDATA.get("LINK", "")
 
 
 # setting commands
-cmds = ["start","help","mdisk","thumb","remove","show","change"]
+cmds = ["start","help","mdisk","set_thumb","delete_thumb","show_thumb","change"]
 descs = ["Basic Usage","Help Message","Usage","Reply to a Image of size less than 200KB to set it as Thumbnail","Remove Thumbnail","Show Thumbnail","Change Upload Mode"]
 with app: app.set_bot_commands(BotCommand(cmds[i].lower(),descs[i]) for i in range(len(cmds)))
 
@@ -247,7 +247,7 @@ def echo(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
         return
     
     app.send_message(message.chat.id, f'**👋 Hᴇʏ {message.from_user.mention}**\n\n **Iᴍ Mᴅɪsᴋ Vɪᴅᴇᴏ Dᴏᴡɴʟᴏᴀᴅᴇʀ Bᴏᴛ, Yᴏᴜ Cᴀɴ Wᴀᴛᴄʜ Dᴏᴡɴʟᴏᴀᴅᴇᴅ Vɪᴅᴇᴏs Wɪᴛʜᴏᴜᴛ MX Pʟᴀʏᴇʀ.**\n\n**For More Information Click** /Help',reply_to_message_id=message.id,
-    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("📦 Source Code", url="https://github.com/bipinkrish/Mdisk-Downloader-Bot")]]))
+    reply_markup=InlineKeyboardMarkup([[ InlineKeyboardButton("✴️ Join My Update Channel ✴️", url="https://t.me/Archie_Bots")]]))
 
 
 # help command
@@ -585,7 +585,7 @@ def mdisktext(client: pyrogram.client.Client, message: pyrogram.types.messages_a
         return
 
     if message.text[0] == "/":
-        app.send_message(message.chat.id, '__see /help__',reply_to_message_id=message.id)
+        app.send_message(message.chat.id, 'Check /help',reply_to_message_id=message.id)
         return
 
     id = getlock(message.from_user.id)
