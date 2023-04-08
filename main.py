@@ -493,7 +493,7 @@ def mdiskdown(client: pyrogram.client.Client, message: pyrogram.types.messages_a
 
 
 # thumb command
-@app.on_message(filters.command(["thumb"]))
+@app.on_message(filters.command(["set_thumb"]))
 def thumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
@@ -515,7 +515,7 @@ def thumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_m
 
 
 # show thumb command
-@app.on_message(filters.command(["show"]))
+@app.on_message(filters.command(["show_thumb"]))
 def showthumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
@@ -529,7 +529,7 @@ def showthumb(client: pyrogram.client.Client, message: pyrogram.types.messages_a
 
 
 # remove thumbline command
-@app.on_message(filters.command(["remove"]))
+@app.on_message(filters.command(["remove_thumb"]))
 def removethumb(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
     
     if not checkuser(message):
