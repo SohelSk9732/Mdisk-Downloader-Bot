@@ -258,13 +258,7 @@ def help(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
         app.send_message(message.chat.id, '__You are either not **Authorized** or **Banned**__',reply_to_message_id=message.id)
         return
     
-    helpmessage = """__**/start** - basic usage
-**/help** - 
-**/mdisk mdisklink** - usage
-**/thumb** - reply to a image document of size less than 200KB to set it as Thumbnail ( you can also send image as a photo to set it as Thumbnail automatically )
-**/remove** - remove Thumbnail
-**/show** - show Thumbnail
-**/change** - change upload mode ( default mode is Document )__"""
+    helpmessage = """**📖 Help**\n\n**Following are the commands and its description:**\n\n/start - check bot alive\n/mdisk mdisklink - usage \n/set_thumb - set default thumbnail\n/delete_thumb - delete default thumbnail\n/show_thumb - show Thumbnail\n/change - change upload mode\n\n**I Am Made By [Archie Bots ](https://t.me/Archie_Bots)**"""
     app.send_message(message.chat.id, helpmessage, reply_to_message_id=message.id)
 
 
